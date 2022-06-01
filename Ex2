@@ -1,0 +1,30 @@
+package com.Tutor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+        List<Integer> arrayList = new ArrayList<>();
+        arrayList.add(4);
+        arrayList.add(5);
+        arrayList.add(6);
+        arrayList.add(6);
+        arrayList.add(8);
+
+        Main main = new Main();
+        System.out.println(main.solution(arrayList));
+    }
+    public boolean solution(List<Integer> arrayList) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            for (int j = 0; j < arrayList.size(); j++) {
+                if (i < j) {
+                    if (arrayList.get(i) == arrayList.get(j)) {
+                        return true;
+                    }
+                }
+            }
+        } return false;
+    }
+}
